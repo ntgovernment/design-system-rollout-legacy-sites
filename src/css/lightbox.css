@@ -1,0 +1,17 @@
+/*
+-----------------------------
+  Lightbox
+-----------------------------
+*/
+#lightbox a.external {
+  text-decoration: none;
+  border: none;
+}
+
+#lightbox a.external::after {
+  content: none;
+}
+
+#lightbox .lb-outerContainer {
+  background-color: transparent;
+}

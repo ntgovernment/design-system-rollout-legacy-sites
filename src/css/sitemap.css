@@ -1,0 +1,32 @@
+/*
+-----------------------------
+  Sitemap
+-----------------------------  
+*/
+.sitemap a[role="button"] {
+  border: none;
+  margin-right: 5px;
+  color: var(--clr-action-hover);
+}
+.sitemap a[role="button"][aria-expanded="true"] i::before {
+  content: "\f146";
+}
+.sitemap ul.first-level {
+  padding-left: 0;
+}
+.sitemap ul.first-level li::before {
+  content: none;
+}
+.sitemap ul.second-level {
+  padding-left: 24px;
+}
+.sitemap ul.second-level li::before {
+  content: none;
+}
+.sitemap ul.third-level {
+  padding-left: 52px;
+}
+.sitemap ul.third-level li::before {
+  content: "\f111";
+  font-family: 'Font Awesome 5 Pro';
+}

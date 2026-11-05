@@ -1,0 +1,42 @@
+/*
+-----------------------------
+    Forms
+-----------------------------    
+*/
+.content form ul {
+  padding: 0;
+}
+/*.content form li::before {
+  content: '';
+}*/
+.content form li label {
+  display: inline;
+  font-weight: normal;
+}
+.content form label {
+  display: block;
+  font-weight: bold;
+}
+.content form .sq-form-required-field {
+  color: var(--clr-status-danger);
+}
+.content form .sq-form-question-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.content form textarea {
+  padding: 5px 10px;
+}
+/*fix for unordered list bullet items in forms*/
+.content form ul li::before {
+  content: '\f111';
+  padding-left: 20px;
+}
+.content form ul.no-padding {
+  padding: 0;
+}
+.content form ul li.no-before::before {
+  content: '';
+  padding: 0;
+}
+

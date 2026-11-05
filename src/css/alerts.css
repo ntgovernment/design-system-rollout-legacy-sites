@@ -1,0 +1,194 @@
+/*
+-----------------------------
+Accordion - Subtopic
+-----------------------------
+*/
+.subtopic-children li {
+    padding-top:10px; 
+    padding-bottom: 15px; 
+    border-bottom: 1.3px solid var(--clr-border-subtle);
+}
+.sub-topic-title, .sub-topic-title a {
+    font-weight: bold; 
+    font-size:1.1rem;
+    border: none;
+}
+.sub-topic-title a:hover {
+    border-bottom: 1.3px solid currentColor;
+    /*border-bottom: 1.3px solid #005ea5 !important;*/
+}
+.expand-collapse {
+    float: right;
+    padding:0;
+    margin-bottom: 15px;
+}
+
+.expand-collapse-landing button {
+    float: none !important;
+}
+
+.accordion-group {
+    clear: both;
+}
+.accordion-group .btn {
+    white-space: normal;
+}
+
+.btn-show, .btn-hide {
+    background: none;
+    padding:0;
+    color: var(--clr-link-default);
+    /*color: #005ea5;*/
+    border-bottom: 1.3px solid currentColor;
+    border-radius: 0;
+    line-height: 1.3;
+}
+.btn-show:hover, .btn-hide:hover {
+    border-bottom: none;
+}
+.btn-show:focus, .btn-hide:focus {
+    box-shadow: 0 0 0 0.1rem rgb(from var(--clr-focus-focus) r g b / 0.15);
+}
+
+@media (max-width: 768px) {
+  .expand-collapse {
+    width:100%;
+    clear: both;
+  }
+}
+
+/*
+-----------------------------
+Page alerts
+-----------------------------
+*/
+.page-alert {
+    margin: 1.4rem 0;
+    padding: 1rem;
+    border-left-width: 0.57rem !important;
+    border-radius: 0;
+}
+.page-alert h2:before, .page-alert h3:before, .page-alert h4:before, .page-alert h5:before, .page-alert h6:before {
+    font-family: "Font Awesome 5 Pro", "FontAwesome";
+    font-weight: 390;
+    margin-right: 0.7rem;
+}
+.page-alert h2, .page-alert h3, .page-alert h4, .page-alert h5, .page-alert h6 {
+    margin: 0 0 0.5rem 0;
+}
+.page-alert p:last-child, #label p:last-child {
+    margin-bottom:0;
+}
+.page-alert ul, .page-alert ol {
+    padding-top: 0.5rem;
+}
+.page-alert ul li:before {
+    color: var(--clr-text-default) !important;
+}
+.page-alert ul li, .page-alert ol li {
+    margin-bottom: 5px;
+}
+.page-alert li:last-child {
+    border: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.page-alert-info {
+    border: 1.25px solid var(--clr-text-muted);
+    background-color: whiteSmoke;
+}
+.page-alert-info h2:before, .page-alert-info h3:before, .page-alert-info h4:before, .page-alert-info h5:before, .page-alert-info h6:before {
+    content: "\f30f";
+    color: var(--clr-text-muted);
+}
+.page-alert-imp {
+    border: 1.25px solid var(--clr-status-info);
+}
+.page-alert-imp h2:before, .page-alert-imp h3:before, .page-alert-imp h4:before, .page-alert-imp h5:before, .page-alert-imp h6:before {
+    content: "\f05a";
+    color: var(--clr-status-info);
+}
+.page-alert-success {
+    border: 1.25px solid var(--clr-status-success);
+    border-left-width: 0.5rem;
+}
+.page-alert-success h2:before, .page-alert-success h3:before, .page-alert-success h4:before, .page-alert-success h5:before, .page-alert-success h6:before {
+    content: "\f058";
+    color: var(--clr-status-success);
+}
+.page-alert-error {
+    border: 1.25px solid var(--clr-status-danger);
+    border-left-width: 0.5rem;
+}
+.page-alert-error h2:before, .page-alert-error h3:before, .page-alert-error h4:before, .page-alert-error h5:before, .page-alert-error h6:before {
+    content: "\f2ee";
+    color: var(--clr-status-danger);
+}
+.page-alert-warning {
+    border: 1.25px solid var(--clr-status-warning);
+    border-left-width: 0.5rem;
+}
+.page-alert-warning h2:before, .page-alert-warning h3:before, .page-alert-warning h4:before, .page-alert-warning h5:before, .page-alert-warning h6:before {
+    content: "\f071";
+    color: var(--clr-status-warning);
+}
+
+/*
+-----------------------------
+Alert box - 14/01/2019
+-----------------------------
+*/
+.alert-box {
+    max-width: 100%;
+    box-shadow: none;
+    border-left: 1rem solid var(--clr-status-warning);
+    border-top: 1px solid var(--clr-status-warning);
+    border-right: 1px solid var(--clr-status-warning);
+    border-bottom: 1px solid var(--clr-status-warning);
+    margin: 1.4rem 0;
+    padding: 1.25rem;
+}
+.alert-box h2, .alert-box h3, .alert-box h4, .alert-box h5, .alert-box h6 {
+    margin: 0 0 1rem 0;
+}
+.alert-box p:last-child, #label p:last-child {
+    margin-bottom:0;
+}
+.alert-box ul {
+  list-style-type: none !important;
+  margin: 0;
+  padding: 0;
+}
+.alert-box ul li:before {content: none;}
+.alert-box ul li {margin-bottom: 0 !important;}
+.alert-box li {
+  border-bottom: 1px dotted var(--clr-status-warning);
+  padding: 0.5rem 0 0.5rem 2rem;
+  position: relative;
+}
+.alert-box li:after {
+  position: absolute;
+  display: block;
+  font-family: "Font Awesome 5 Pro", "FontAwesome";
+  content: "\f06a";
+  font-size: 1.5em;
+  top: 0.15rem;
+  left: 0;
+  color: var(--clr-text-alt);
+}
+.alert-box li:last-child {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/*
+-----------------------------
+Accordion - Fix IE image spacing 
+-----------------------------
+*/
+.accordion-group .show {
+    height:100%;
+}
+

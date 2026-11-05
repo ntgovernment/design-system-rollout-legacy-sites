@@ -1,0 +1,51 @@
+/*
+-----------------------------
+  Images
+-----------------------------  
+*/
+.content img {
+  max-width: 100%;
+}
+.content .imagefull {
+  padding: 5px;
+  border: solid 1px var(--clr-border-subtle);
+  border: solid 1px var(--clr-border-subtle);
+  -moz-box-shadow: 1px 1px 5px var(--clr-text-muted);
+  -webkit-box-shadow: 1px 1px 5px var(--clr-text-muted);
+  box-shadow: 1px 1px 5px var(--clr-text-muted);
+  max-width: 95%;
+  clear: both;
+}
+.content .imagehalf {
+  padding: 5px;
+  border: solid 1px var(--clr-border-subtle);
+  border: solid 1px var(--clr-border-subtle);
+  -moz-box-shadow: 1px 1px 5px var(--clr-text-muted);
+  -webkit-box-shadow: 1px 1px 5px var(--clr-text-muted);
+  box-shadow: 1px 1px 5px var(--clr-text-muted);
+  max-width: 46%;
+  margin-left: 5px;
+}
+.content .imagethird {
+  padding: 5px;
+  border: solid 1px var(--clr-border-subtle);
+  border: solid 1px var(--clr-border-subtle);
+  -moz-box-shadow: 1px 1px 5px var(--clr-text-muted);
+  -webkit-box-shadow: 1px 1px 5px var(--clr-text-muted);
+  box-shadow: 1px 1px 5px var(--clr-text-muted);
+  max-width: 30%;
+  margin-left: 5px;
+}
+.content .imagequarter {
+  padding: 5px;
+  border: solid 1px var(--clr-border-subtle);
+  border: solid 1px var(--clr-border-subtle);
+  -moz-box-shadow: 1px 1px 5px var(--clr-text-muted);
+  -webkit-box-shadow: 1px 1px 5px var(--clr-text-muted);
+  box-shadow: 1px 1px 5px var(--clr-text-muted);
+  max-width: 22%;
+  margin-left: 5px;
+}
+.content .imagefull, .content .imagehalf, .content .imagethird, .content .imagequarter {
+  height: auto;
+}

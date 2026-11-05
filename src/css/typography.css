@@ -1,0 +1,152 @@
+/*
+  Running Squiz Matrix
+  Developed by Squiz - http://www.squiz.net
+  Squiz, Squiz Matrix, MySource, MySource Matrix and Squiz.net are registered Trademarks of Squiz Pty Ltd
+  Page generated: 04 November 2026 09:10:18
+*/
+
+
+/*
+-----------------------------
+Contents
+-----------------------------
+  This file used to be the start of one 4039-line stylesheet (ntg-styles.css).
+  It has since been split into one file per section under src/css/ -- see
+  website/index.html for the full list and load order (typography.css,
+  header.css, breadcrumbs.css, topics.css, tabs.css, news.css,
+  pagination.css, sitemap.css, lists.css, tables.css, forms.css,
+  images.css, search.css, lightbox.css, accordions.css, utilities.css,
+  footer.css, legacy.css, toolkit.css, decision-tree.css,
+  sitemap-page.css, alerts.css, legacy-pages.css), loaded in the same
+  order as the original file so the cascade is unchanged.
+*/
+/*
+-----------------------------
+    Typography
+-----------------------------
+*/
+body {
+  font-family: 'Lato', sans-serif;
+  color: var(--clr-text-default);
+  word-spacing: 1px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--clr-text-default);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: var(--type-h1-size);
+  font-weight: var(--type-h1-weight);
+  padding-bottom: 16px;
+}
+
+h2 {
+  font-size: var(--type-h2-size);
+  font-weight: var(--type-h2-weight);
+  margin: 40px 0 16px;
+}
+
+h3 {
+  font-size: var(--type-h3-size);
+  font-weight: var(--type-h3-weight);
+  margin: 40px 0 16px;
+}
+
+h4 {
+  font-size: var(--type-h4-size);
+  font-weight: var(--type-h4-weight);
+  margin: 40px 0 16px;
+}
+
+h5 {
+  font-size: var(--type-h5-size);
+  font-weight: var(--type-h5-weight);
+  margin: 40px 0 16px;
+}
+
+h6 {
+  font-size: var(--type-h6-size);
+  font-weight: var(--type-h6-weight);
+}
+
+/*
+    Main link styles
+*/
+a {
+  /*color: #005ea5;*/
+  color: var(--clr-link-default);
+  padding-bottom: 1px;
+  border-bottom: 1.3px solid currentColor;
+}
+a:hover {
+  text-decoration: none;
+  border-width: 0;
+  box-sizing: border-box;
+  color: var(--clr-link-hover);
+}
+
+main a:hover, footer a:hover {
+  padding-bottom: 3px;
+  /* Stops hover flicker */
+}
+
+.border-0 a {border: 0!important;}
+
+.homepage a:hover.btn, .page a.btn:hover {
+  padding-bottom: 8px;
+}
+
+header a, .topics a, .gov-buttons a, a.news-image, .most-popular a, .news-list a.thumb-link, .topic-popular a, a.related-toggle, .footer-logo a, .footer-social a, .close-page-useful, .rsbtn a {
+  text-decoration: none;
+  border-width: 0;
+}
+
+.accToggle.external::after {
+  content: none;
+}
+
+.homepage .featured-link {
+    border-bottom: 1px solid var(--clr-border-subtle);
+}
+.homepage .featured-link h3 {
+    color: var(--clr-status-info);
+}
+
+.homepage .homepage-alert-wrapper {
+    background-color:var(--clr-bg-shade); 
+    padding: 18px;
+}
+
+.featured-link.mobile {
+    /* background-color: #127CC0; */
+    margin: 0 -8px 0 -8px; 
+    padding-left: 8px !important;
+    border: none;
+}
+
+/*
+  NTG button style
+*/
+.btn {
+  padding: 8px 25px;
+  transition: background-color 0.4s ease-in;
+}
+.btn.btn-primary {
+  border: initial;
+  background-color: var(--clr-action-pirmary);
+}
+.btn.btn-primary:hover {
+  background-color: var(--clr-action-hover);
+  /*background-color: #005ea5;*/
+}
+
+.btn.external::after {
+  content: none;
+}
+
+.btn.skyblue {
+  background-color: var(--clr-status-info);
+  color: var(--clr-text-inverse);
+}

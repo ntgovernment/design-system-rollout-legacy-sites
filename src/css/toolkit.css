@@ -1,0 +1,128 @@
+/*
+-----------------------------
+Toolkit
+-----------------------------
+*/
+.adj {
+  margin-bottom:-0.5rem;
+}
+.banner-toolkit {
+  background: var(--clr-bg-dark);
+  min-height: 200px;
+}
+.banner-toolkit h1 {
+  font-weight: 500;
+  font-size: 50px;
+}
+.banner-toolkit h1 span {
+  font-size: 24px;
+  font-weight: normal;
+  display: block;
+}
+
+.news .article h3 a, .news .article .meta {
+  /*color: #527AA1;*/
+  color: var(--clr-status-info);
+}
+.news .event h3 a, .news .event .meta {
+  color: var(--clr-link-visited);
+}
+.news .tool h3 a, .news .tool .meta {
+  color: var(--clr-status-success);
+}
+.news .alert2 h3 a, .news .alert2 .meta {
+  color: var(--clr-bg-accent-alt);
+}
+
+.news .btn-article {
+  /*background-color: #527AA1;*/
+  background-color: var(--clr-status-info);
+  color: white;
+  border-width: unset;
+}
+.news .btn-event {
+  background-color: var(--clr-link-visited);
+  color: white;
+  border-width: unset;
+}
+.news .btn-tool {
+  background-color: var(--clr-status-success);
+  color: white;
+  border-width: unset;
+}
+.news .btn-alert2 {
+  background-color: var(--clr-bg-accent-alt);
+  color: white;
+  border-width: unset;
+}
+
+.help {
+  background-color: var(--clr-bg-shade);
+  z-index: 100;
+  position: relative;
+}
+/*.help::after {
+  background-image: url("https://beta.nt.gov.au/_design/css/ntg-styles.css/ask-help-no-sky.svg");
+  background-repeat: no-repeat;
+  /*background-size: 800px;
+  background-position: 90% -50px;
+  opacity: 0.5;
+  background-size: 600px;
+  background-position: 90% 20px;
+  opacity: 1;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}*/
+.help-img::after {
+  background-image: url("https://beta.nt.gov.au/_design/css/ntg-styles.css/ask-help.svg");
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: 90% -50px;
+  opacity: 0.5;
+  
+  /*background-image: url("https://beta.nt.gov.au/_design/css/ntg-styles.css/ask-help-no-sky.svg");
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-position: 90% 20px;
+  opacity: 1;*/
+  
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+/*.help h1, .help p {
+    color: #000;
+}*/
+@media (max-width: 1024px) {
+  .help-img::after {
+    opacity: 0.3;
+  }
+}
+
+code {
+    color: var(--clr-text-inverse);
+    background: var(--clr-text-alt);
+    padding: 0.5rem;
+    display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .topic-popular h2 {
+    margin-bottom: 10px !important;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .topic-popular .topic-popular-links h3 {
+    margin-top: 10px;
+    font-size: 18px;
+  } 
+}
+
+    

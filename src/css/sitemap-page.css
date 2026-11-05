@@ -1,0 +1,25 @@
+/*
+-----------------------------
+Sitemap page
+-----------------------------
+*/
+.sitemap-ntg ul li::before, .sitemap-ntg ul li li::before {
+    font-family: "Font Awesome 5 Pro";
+    padding-top: 0;
+    color: var(--clr-action-hover);
+}
+.sitemap-ntg ul li {font-weight:bold;}
+.sitemap-ntg ul li li {font-weight:normal;}
+.sitemap-ntg ul li li a {border-bottom: 1px solid currentColor;}
+.sitemap-ntg ul li::before {
+    content: "\f061";
+    font-size: 14px;
+    font-weight:400;
+}
+.sitemap-ntg ul li li::before {
+    content: "\f054";
+    font-size: 10px;
+}
+.sitemap-ntg ul li li a:hover {
+    border-bottom: none;
+}

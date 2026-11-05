@@ -1,0 +1,381 @@
+/*
+-----------------------------
+  Header
+-----------------------------  
+*/
+.skip-links {
+  position: relative;
+  z-index: 10;
+}
+.skip-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.skip-links li {
+  position: absolute;
+}
+.skip-links a {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.skip-links a:focus, .skip-links a:active {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  color: var(--clr-text-inverse);
+}
+
+header {
+  /*background: #173558;*/
+  background: var(--clr-bg-dark);
+  position: relative;
+}
+/* header:after {
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.15));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  content: '';
+} */
+header a:hover {
+  text-decoration: none;
+}
+header img.site-logo {
+  width: 140px;
+  /*width: 200px;*/
+  height: 40px;
+}
+header img.site-logo-dept {
+  height: 60px;
+}
+header img.site-logo-toolkit {
+  height: 40px;
+}
+header .navbar {
+  padding: 0 1rem;
+}
+header nav a.nav-link {
+  color: white;
+  display: block;
+  padding: 35px 44px 35px;
+}
+    @media (max-width: 991px) {
+        header nav a.nav-link {
+            padding: 20px 44px 20px;
+        }
+    }
+
+header nav a.nav-link:hover {
+  background-color: var(--clr-action-hover);
+  color: white;
+}
+header ul {
+  padding: 0;
+  margin: 0;
+}
+header ul li {
+  list-style: none;
+}
+header .navbar-toggler-icon::before {
+  font-family: 'Font Awesome 5 Pro';
+  content: '\f0c9';
+  color: white;
+  font-size: 36px;
+  line-height: 0.8;
+}
+header #navbarCollapse li {
+  padding: 10px 0;
+}
+header #navbarCollapse li a {
+  color: white;
+  display: block;
+}
+
+/*@media (max-width: 768px) {
+  header {
+    padding: 20px 0;
+  }
+}*/
+@media (max-width: 767px) {
+  header {
+    padding: 20px 0;
+  }
+}
+.banner {
+  background-color: var(--clr-bg-dark);
+  /*background-color: #1e4a7b;*/
+  z-index: 100;
+  position: relative;
+}
+.banner::after {
+  background-image: url("https://ntgov-web-dev.matrix.squiz.cloud/education/_design/latest/css/ntg-styles.css/ntg-primary-mono.svg");
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: 90% -50px;
+  opacity: 0.5;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+}
+.banner a {
+  color: white;
+}
+.banner h1, .banner h2 {
+  color: white;
+}
+.banner .banner-list ul {
+  padding: 0;
+  margin-bottom: 40px;
+}
+.banner .banner-list ul li {
+  list-style: none;
+  margin: 5px 0;
+  position: relative;
+  display: block;
+  padding-left: 25px;
+}
+.banner .banner-list ul li::before {
+  position: absolute;
+  left: 0;
+  font-family: "Font Awesome 5 Pro";
+  content: "\f061";
+  padding-top: 2px;
+  color: white;
+  font-size: 16px;
+}
+
+.banner-ntg {
+  padding-top: 40px;
+  min-height: 180px;
+}
+.banner-ntg h1 {
+  font-size: 30px;
+}
+.banner-ntg h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.banner-agency {
+  background: var(--clr-action-pirmary);
+  min-height: 200px;
+}
+.banner-agency h1 {
+  font-weight: 900;
+  font-size: 50px;
+}
+.banner-agency h1 span {
+  font-size: 24px;
+  font-weight: normal;
+  display: block;
+}
+
+.topics div[class^="col"] {
+  padding: 20px;
+  transition: background 0.3s ease;
+}
+.topics div[class^="col"] i {
+  transition: background 0.3s ease;
+}
+.topics div[class^="col"]:hover {
+  background-color: var(--clr-bg-shade);
+}
+.topics div[class^="col"]:hover h3 {
+  border-bottom: 3px dotted var(--clr-action-hover);
+  color: var(--clr-action-hover);
+}
+.topics div[class^="col"]:hover i {
+  color: var(--clr-action-hover);
+}
+.topics a {
+  color: black;
+  display: block;
+}
+.topics a:hover {
+  text-decoration: none;
+  padding-bottom: 1px;
+}
+.topics h3 {
+  margin: 0;
+  border-bottom: 3px dotted var(--clr-border-subtle);
+  color: var(--clr-link-default);
+  /* border-bottom: 3px dotted #7faed2;
+  color: #1c4774;*/
+  font-weight: bold;
+  font-size: 22px;
+  padding-bottom: 10px;
+}
+.topics p {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.news {
+  background: var(--clr-bg-shade);
+}
+.news .card-img-top {
+  width: 100%;
+  max-width: 100%;
+  max-height: 220px;
+  display: block;
+}
+.news a {
+  color: var(--clr-link-default);
+  height: auto;
+  overflow: hidden;
+  border-bottom: none;
+}
+.news h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.news .btn-article {
+  background-color: var(--clr-status-info);
+  color: white;
+  border-width: unset;
+}
+.news .btn-initiative {
+  background-color: var(--clr-link-visited);
+  color: white;
+  border-width: unset;
+}
+.news .btn-consultation {
+  background-color: var(--clr-status-success);
+  color: white;
+  border-width: unset;
+}
+.news .btn-newsalert {
+  background-color: var(--clr-bg-accent-alt);
+  color: white;
+  border-width: unset;
+}
+.news .article h3 a, .news .article .meta {
+  color: var(--clr-status-info);
+}
+.news .initiative h3 a, .news .initiative .meta {
+  color: var(--clr-link-visited);
+}
+.news .consultation h3 a, .news .consultation .meta {
+  color: var(--clr-status-success);
+}
+.news .newsalert h3 a, .news .newsalert .meta {
+  color: var(--clr-bg-accent-alt);
+}
+.news .card-footer {
+  background: none;
+  border-top: none;
+}
+
+.agency-news-list ul {
+  padding-left: 0;
+}
+.agency-news-list ul li {
+  list-style: none;
+}
+
+.news-info {
+  font-size: 23px;
+}
+
+.about-gov {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.about-gov h2 {
+  font-size: 34px;
+  font-weight: normal;
+}
+.about-gov ul {
+  padding: 0;
+}
+.about-gov li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.about-gov li::before {
+  content: none;
+}
+.about-gov .gov-buttons a {
+  display: block;
+  width: 100%;
+  max-width: 355px;
+  height: 100px;
+  background: url("https://ntgov-web-dev.matrix.squiz.cloud/education/_design/latest/css/ntg-styles.css/ntg-primary-mono.svg") no-repeat top right;
+  background-size: 35%;
+  background-position: 126% -10px;
+  margin-bottom: 5px;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  transition: opacity 0.5s ease;
+}
+.about-gov .gov-buttons a:hover {
+  opacity: 0.9;
+}
+.about-gov .gov-buttons span {
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.about-agency h2 {
+  font-size: 32px;
+  border-bottom: 4px var(--clr-border-subtle) solid;
+}
+.about-agency h3 {
+  font-weight: 900;
+}
+.about-agency ul {
+  padding-left: 0;
+}
+.about-agency ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.about-agency ul.site-links li {
+  width: 30%;
+  padding-right: 3%;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .about-agency ul.site-links li {
+    width: 50%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .about-agency ul.site-links li {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+header nav a.nav-link.bg-blue {
+    background-color: var(--clr-status-info);
+    color: white;
+}
+
+header nav a.nav-link.bg-blue:hover {
+    background-color: var(--clr-status-info); /* 15 percent lighter to HEX 127CC0*/
+}

@@ -1,0 +1,18 @@
+/*
+-----------------------------
+  Breadcrumb
+-----------------------------
+*/
+nav[aria-label="breadcrumb"] ol.breadcrumb {
+  background: none;
+  padding-left: 0;
+}
+nav[aria-label="breadcrumb"] .breadcrumb-item + .breadcrumb-item::before {
+  content: '\f054';
+  font-family: "Font Awesome 5 Pro";
+  font-size: 12px;
+  color: var(--clr-action-hover);
+}
+nav[aria-label="breadcrumb"] .breadcrumb-item.active {
+  color: var(--clr-text-default);
+}

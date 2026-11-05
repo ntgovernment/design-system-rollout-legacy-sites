@@ -1,0 +1,171 @@
+/*
+-----------------------------
+  Accordions V3
+-----------------------------  
+*/
+.accordion-group > .card {
+  border: none;
+}
+.accordion-group .card-header {
+  padding: 0;
+  margin-bottom: 10px;
+}
+.accordion-group h3 a, .accordion-group h2 a {
+  display: block;
+  text-align: left;
+  border: none;
+  color: var(--clr-text-default);
+  border-radius: 0;
+  font-size: 20px;
+  font-weight: bold;
+  background: whiteSmoke;
+  padding: 18px !important;
+}
+.accordion-group h3 a:hover, .accordion-group h3 a[aria-expanded=true], .accordion-group h2 a:hover, .accordion-group h2 a[aria-expanded=true] {
+  background: var(--clr-bg-shade-alt);
+}
+.accordion-group h3 a::after, .accordion-group h2 a::after {
+  content: '\002B';
+  color: var(--clr-text-alt);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+.accordion-group h3 a[aria-expanded=true]::after, .accordion-group h2 a[aria-expanded=true]::after {
+  content: "\2212";
+}
+
+/*
+-----------------------------
+  Accordions V2
+-----------------------------  
+*/
+.accordion {
+  background-color: whiteSmoke;
+  color: var(--clr-text-default);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+/* Steve fixes----*/  .accordion ~ div.panel {display: none; }
+    
+
+.accordion.active, .accordion:hover {
+  background-color: var(--clr-bg-shade-alt);
+}
+
+.accordion:after {
+  content: '\002B';
+  color: var(--clr-text-alt);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.accordion.active:after {
+  content: "\2212";
+}
+
+div.panel {
+  padding: 0 18px 15px;
+  background-color: white;
+  transition: max-height 0.2s ease-out;
+  /*display: none;*/
+}
+
+/*
+-----------------------------
+  Accordions V1
+-----------------------------
+*/
+.ac-label {
+  position: relative;
+  padding: .5em 1em;
+  margin-bottom: .5em;
+  display: block;
+  cursor: pointer;
+  background-color: whiteSmoke;
+  transition: background-color .15s ease-in-out;
+}
+
+.ac-input:checked + label, .ac-label:hover, .ac-input:focus + label {
+  background-color: var(--clr-bg-shade-alt);
+}
+
+.ac-label:after, .ac-input:checked + .ac-label:after {
+  content: "+";
+  position: absolute;
+  display: block;
+  right: 0;
+  top: 0;
+  width: 2em;
+  height: 100%;
+  line-height: 2.25em;
+  text-align: center;
+  background-color: var(--clr-bg-shade-alt);
+  transition: background-color .15s ease-in-out;
+}
+
+.ac-label:hover:after, .ac-input:checked + .ac-label:after {
+  background-color: var(--clr-text-muted);
+}
+
+.ac-input:checked + .ac-label:after {
+  content: "-";
+}
+
+.ac-input {
+  position: absolute;
+  left: -9999em;
+}
+
+.ac-text, .ac-sub-text {
+  opacity: 0;
+  height: 0;
+  margin-bottom: .5em;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+}
+
+.ac-input:checked ~ .ac-text, .ac-sub .ac-input:checked ~ .ac-sub-text {
+  opacity: 1;
+  height: auto;
+}
+
+.ac-sub .ac-label {
+  background: none;
+  font-weight: 600;
+  padding: .5em 2em;
+  margin-bottom: 0;
+}
+
+.ac-sub .ac-label:checked {
+  background: none;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.ac-sub .ac-label:after, .ac-sub .ac-input:checked + .ac-label:after {
+  left: 0;
+  background: none;
+}
+
+.ac-sub .ac-input:checked + label, .ac-sub .ac-label:hover {
+  background: none;
+}
+
+.ac-sub-text {
+  padding: 0 1em 0 2em;
+}
+
+/*
+    Utilities
+*/
+main {
+  min-height: 220px;
+}

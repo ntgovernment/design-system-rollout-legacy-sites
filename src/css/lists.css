@@ -1,0 +1,62 @@
+/*
+-----------------------------
+  Lists
+-----------------------------  
+*/
+main ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+main ul li:before {
+  content: "\f111";
+  font-family: 'Font Awesome 5 Pro';
+  display: inline-block;
+  position: relative;
+  max-width: 0;
+  max-height: 0;
+  left: -20px;
+  top: -3px;
+  color: var(--clr-action-hover);
+  font-size: 7px;
+  font-weight: 900;
+}
+main ul ul {
+  margin-top: 10px;
+}
+main ul ul li::before {
+  content: "\f111";
+  font-family: 'Font Awesome 5 Pro';
+  font-size: 7px;
+  font-weight: 400;
+}
+main ul ul ul > li::before {
+  content: "\f04d";
+  font-family: 'Font Awesome 5 Pro';
+  font-size: 7px;
+  font-weight: 900;
+}
+main ul ul ul ul > li::before {
+  content: "\f04d";
+  font-family: 'Font Awesome 5 Pro';
+  font-size: 7px;
+  font-weight: 400;
+}
+/*main ul ul li::before {
+  content: "\f10c";
+  font-family: 'Font Awesome 5 Pro';
+  font-size: 8px;
+}
+main ul ul ul > li::before {
+  content: "\f04d";
+  font-family: 'Font Awesome 5 Pro';
+  font-size: 8px;
+}*/
+
+main ol li {
+  list-style: unset !important;
+}
+
+main ol li:before {
+  content: "" !important;
+}
+

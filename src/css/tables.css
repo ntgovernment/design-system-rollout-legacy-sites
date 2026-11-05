@@ -1,0 +1,14 @@
+/*
+-----------------------------
+    Tables
+-----------------------------    
+*/
+@media (max-width: 768px) {
+  main table.small-only {
+    display: block;
+  }
+
+  main table.large-only {
+    display: none;
+  }
+}

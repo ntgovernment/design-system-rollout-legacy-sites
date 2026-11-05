@@ -1,0 +1,309 @@
+/*
+-----------------------------
+  Back to top
+-----------------------------
+*/
+.back-to-top {
+  position: fixed;
+  bottom: 20%;
+  right: 30px;
+  display: none;
+  background: var(--clr-text-alt);
+  border-radius: 3px;
+  z-index: 1000;
+}
+
+.back-to-top a {
+  border: none;
+  text-decoration: none;
+  display: block;
+  padding: 7px 12px;
+}
+
+.back-to-top a:after {
+  content: "\f106";
+  color: white;
+  font-family: 'Font Awesome 5 Pro';
+  font-size: 30px;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border: none;
+  text-decoration: none;
+}
+
+/*
+-----------------------------
+  Dept top bar
+-----------------------------  
+*/
+.site-notice {
+  background: var(--clr-text-default);
+  color: white;
+}
+.site-notice p {
+  margin-bottom: 0;
+}
+.site-notice a {
+  color: white;
+}
+
+.page-options {
+  position: absolute;
+  right: 20px;
+  z-index: 100;
+}
+.page-options li {
+  list-style-type: none;
+  margin-bottom: 15px;
+  background: var(--clr-text-alt);
+  color: white;
+  border-radius: 5px;
+}
+.page-options li::before {
+  content: none;
+}
+.page-options a:hover {
+  padding-bottom: 1px;
+}
+.page-options .option {
+  color: white;
+  right: 0;
+  line-height: 1;
+  font-family: 'Font Awesome 5 Pro';
+  display: block;
+  border-bottom: none;
+  text-decoration: none;
+  font-weight: 300;
+}
+.page-options .option i {
+  padding: 12px;
+}
+.page-options .popover {
+  background: var(--clr-text-alt);
+  width: 140px;
+}
+.page-options .popover .popover-body {
+  color: white;
+}
+.page-options .bs-popover-auto[x-placement^=left] .arrow::after, .page-options .bs-popover-left .arrow::after {
+  border-left-color: var(--clr-text-alt);
+}
+
+/*
+-----------------------------
+  legacy class
+-----------------------------  
+*/
+.hidden {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*
+  Page last updated
+*/
+.updated {
+  color: var(--clr-text-alt);
+}
+
+/*
+-----------------------------
+  CTA
+-----------------------------  
+*/
+.cta, .cta-button {
+    margin: 0 0 1rem 0 !important;
+    padding: 10px 25px !important;
+    display: inline-block;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    background-color: var(--clr-action-pirmary) !important;
+    color: var(--clr-text-inverse);
+    /*background-color: #cf4a22 !important;*/
+}
+input.cta {
+    border: none;
+}
+.cta a.external::after, .cta-button a.external::after{
+    /*content: none;*/
+}
+.cta a, a.cta, .cta p, p.cta, 
+.cta-button a, a.cta-button, .cta-button p, p.cta-button {
+    border:none !important;
+    color: var(--clr-text-inverse) !important;
+    text-decoration: none !important;
+    margin-bottom: 15px !important;
+}
+.cta:focus, .cta:hover,
+.cta-button:focus, .cta-button:hover {
+    background-color: var(--clr-action-hover) !important;
+    /*background-color: #005ea5 !important;*/
+    text-decoration: none;
+    color: var(--clr-text-inverse);
+    border: none !important;
+}
+.cta-description, .cta-description p, 
+.cta-desc, .cta-desc p {
+    color: var(--clr-link-default);
+    /*color: #c84c01;*/
+    padding-top: 1px;
+}
+
+/*
+-----------------------------
+  Link icons
+-----------------------------  
+*/
+a.external::after {
+  content: "\f08e";
+  font-family: 'Font Awesome 5 Pro';
+  padding-left: 5px;
+  font-size: 0.75rem;
+}
+
+a.external[href=""]::after {
+  content: none;
+  padding-left: 0;
+}
+
+em a.external::after {
+  font-style: normal;
+}
+
+.homepage a.external::after, footer a.external::after {
+  display: none;
+}
+
+/*
+-----------------------------
+  File icons
+-----------------------------
+*/
+.icon_docx::before, .icon_doc::before, .icon_dotx::before, .icon_dot::before, .icon_pdf::before, .icon_xlsx::before, .icon_xls::before, .icon_xlts::before, .icon_xlt::before, .icon_xlsm::before, .icon_mp3::before, .icon_wav::before, .icon_jpg::before, .icon_jpeg::before, .icon_gif::before, .icon_png::before, .icon_ppt::before, .icon_pptx::before, .icon_potx::before, .icon_pot::before, .icon_zip::before, .icon_rar::before, .icon_7z::before, .icon_csv::before {
+  font-family: 'Font Awesome 5 Pro';
+  padding-left: 1px;
+  padding-right: 4px;
+  border-bottom-color: white;
+  bottom: 1px;
+  position: relative;
+}
+
+.icon_docx::before, .icon_doc::before, .icon_dotx::before, .icon_dot::before {
+  content: "\f1c2";
+}
+
+.icon_pdf::before {
+  content: "\f1c1";
+  /*color: red;*/
+}
+
+.icon_xlsx::before, .icon_xls::before, .icon_xlts::before, .icon_xlt::before, .icon_xlsm::before {
+  content: "\f1c3";
+  /*color: #207346;*/
+}
+
+.icon_mp3::before, .icon_wav::before {
+  content: "\f1c7";
+  /*color: #f68929;*/
+}
+
+.icon_jpg::before, .icon_jpeg::before, .icon_gif::before, .icon_png::before {
+  content: "\f1c5";
+  /*color: #70be42;*/
+}
+
+.icon_ppt::before, .icon_pptx::before, .icon_potx::before, .icon_pot::before {
+  content: "\f1c4";
+  /*color: #d14524;*/
+}
+
+.icon_zip::before, .icon_rar::before, .icon_7z::before {
+  content: "\f1c6";
+  /*color: #ff5d0d;*/
+}
+
+.icon_csv::before { 
+    content: "\f6dd"; 
+}
+
+/*
+-----------------------------
+  Highlighting
+-----------------------------  
+*/
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+-----------------------------
+    Social icon colors
+-----------------------------    
+*/
+i[class*="fa-linked"] {
+  color: #007bb5;
+}
+
+i[class*="fa-youtube"] {
+  color: #ff0000;
+}
+
+i[class*="fa-twitter"] {
+  color: #1da1f2;
+}
+
+i[class*="fa-facebook"] {
+  color: #3b5998;
+}
+
+i[class*="fa-instagram"] {
+  color: #c32aa3;
+}
+
+i[class*="fa-vimeo"] {
+  color: #1ab7ea;
+}
+
+i[class*="fa-apple"], i[class*="fa-cc-apple"] {
+  color: #a6b1b7;
+}
+
+i[class*="fa-android"] {
+  color: #a4c639;
+}
+
+.footer-links i[class*="fa-comment"] {
+  color: #007e91;
+}
+
+
+/*
+-----------------------------
+  reposonsive embeds by default
+-----------------------------  
+*/
+iframe, embed, video, object {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Embeded incident map styles on #1178618*/
+#depwsincidentmap {
+    width: calc(100% + 30px);
+    height: 600px;
+    margin-left: -15px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}

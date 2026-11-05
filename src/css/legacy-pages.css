@@ -1,0 +1,128 @@
+/*
+-----------------------------
+Multipart 2-column menu
+-----------------------------
+*/
+@media (min-width: 768px) {
+    .multipart-menu-2col {
+        -moz-column-count: 2; /* Firefox */
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2; /* Chrome, Safari, Opera */
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+    }
+    ul.multipart-menu-2col li {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .multipart-menu-2col {
+        column-count: 1;
+    }
+}
+
+
+/*
+-----------------------------
+Nested breadcrumbs JH:20200806
+-----------------------------
+*/
+.breadcrumb-container {
+    background-color: var(--clr-bg-shade);
+}
+.breadcrumb {
+    margin-bottom: 0rem;
+}
+
+
+
+/*
+-----------------------------
+Fix image height for IE
+-----------------------------
+*/
+.image-height-ie {
+    min-height: 10px;
+    flex-shrink: 0;
+}
+
+.image-border {
+    border: 1px solid var(--clr-border-subtle);
+    padding: 4px;
+}
+
+
+
+
+
+/*
+-----------------------------
+Logos in footer
+-----------------------------
+*/
+@media (max-width: 768px) {
+    .ntg-logo-footer {
+        padding-bottom: 20px;
+    }
+}
+
+
+
+
+
+/*
+-----------------------------
+Landing page with introduction
+-----------------------------
+*/
+.background__grey { 
+    background-color: var(--clr-bg-shade); 
+}
+
+main ol.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    content: '\f054' !important;
+}
+
+.campaign-landing .jumbotron {
+    background-color: rgb(from var(--clr-action-pirmary) r g b / 0.8);
+    color: var(--clr-text-inverse);
+    border-radius: 0;
+    padding: 1.5rem 2rem;
+    
+}
+.campaign-landing .jumbotron h1 {
+    color: var(--clr-text-inverse);
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+
+
+/*
+-------------------------------
+"Date printed" to be displayed on all printed pages OS-92548
+-------------------------------
+*/
+
+@media print{
+    
+        #print-date {
+            /*position: fixed;*/ /* Add date and time printed to the final page document OS-117454 - */
+            /*bottom: 10px;*/
+            /*right: 10px;*/
+            text-align: right;
+            padding-right: 45px;
+            font-size: 12px;
+        }
+
+        #print-date:before {
+            content: attr(data-date);
+            display: none;
+        }
+
+        #print-date:after {
+            content: "Printed on: " attr(data-date);
+        }
+    }

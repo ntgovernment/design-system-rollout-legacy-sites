@@ -1,0 +1,59 @@
+/*
+-----------------------------
+  General pagination
+-----------------------------  
+*/
+nav .pagination li {
+  padding: 0;
+  margin: 0;
+}
+nav .pagination li a {
+  border: none;
+  border-top: 4px solid var(--clr-border-subtle);
+  padding: 25px;
+  color: black;
+}
+nav .pagination li a:first-child {
+  border-top-left-radius: 0;
+}
+nav .pagination li a:last-child {
+  border-top-right-radius: 0;
+}
+nav .pagination li a:hover {
+  background: none;
+  border-top: 4px solid var(--clr-link-default);
+  color: var(--clr-link-default);
+}
+nav .pagination li:before {
+  content: '';
+}
+
+nav .pagination li.page-item.active a.page-link {
+  border-color: var(--clr-link-default);
+  background: var(--clr-bg-shade);
+  color: var(--clr-link-default);
+}
+
+/*
+-----------------------------
+  Search pagination
+-----------------------------  
+*/
+.search-wrapper .pagination li.page-item a {
+    color: var(--clr-link-default);
+}
+.search-wrapper .pagination li.page-item.active a {
+    color: var(--clr-text-inverse);
+}
+.search-wrapper .pagination li.page-item:before {
+  content: '';
+}
+.search-wrapper .pagination li.page-item a:hover {
+    border-width: 1px;
+    padding-bottom: 0.5rem;
+}
+.search-wrapper .pagination li.page-item.active a.page-link {
+    background: var(--clr-action-pirmary);
+    border-color: var(--clr-border-strong-01);
+}
+

@@ -1,0 +1,85 @@
+/*
+-----------------------------
+Bootstrap overrides -- new design system
+-----------------------------
+  Bootstrap (assets/css/bootstrap.min.css) is left untouched. Everything
+  here re-styles Bootstrap's own classes using the new design-system
+  tokens from tokens.css, loaded last so it wins the cascade over both
+  bootstrap.min.css and the ntg-styles.css split files above it.
+
+  Scope: the "ship now" tier from the Square Corners design-system audit --
+  flatten border-radius sitewide, bring .form-control to full parity with
+  the new system's input spec, and swap Bootstrap's blue focus rings for
+  the new outline token. Button padding and spacing-scale adoption were
+  explicitly held back from this pass.
+*/
+
+/*
+-----------------------------
+  Flatten border-radius
+-----------------------------
+*/
+.form-control,
+.btn,
+.card,
+.nav-tabs .nav-link,
+.breadcrumb,
+.badge,
+.dropdown-menu,
+.alert,
+.popover,
+.custom-select {
+  border-radius: var(--radii-none);
+}
+
+/*
+-----------------------------
+  Form control -- full match to the new input spec
+-----------------------------
+*/
+.form-control {
+  height: 52px;
+  padding: 0 var(--sp-md);
+  border: var(--border-width-md) solid var(--clr-border-strong-02);
+  background-color: var(--clr-bg-default);
+  color: var(--clr-text-default);
+}
+.form-control::placeholder {
+  color: var(--clr-text-alt);
+  opacity: 1;
+}
+textarea.form-control {
+  /* textareas keep their own height -- the 52px fixed height is for single-line inputs only */
+  height: auto;
+  padding: var(--sp-sm) var(--sp-md);
+}
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: var(--clr-status-success);
+}
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus {
+  box-shadow: inset 0 0 0 2px var(--clr-status-success);
+}
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  border-color: var(--clr-status-danger);
+}
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus {
+  box-shadow: inset 0 0 0 2px var(--clr-status-danger);
+}
+
+/*
+-----------------------------
+  Focus outline -- replace Bootstrap's blue glow everywhere
+-----------------------------
+*/
+.form-control:focus,
+.custom-select:focus,
+.btn:focus,
+.btn.focus {
+  border-color: var(--clr-border-strong-02);
+  outline: var(--outline-focus);
+  box-shadow: none;
+}

@@ -1,0 +1,58 @@
+/*
+-----------------------------
+  Tabs
+-----------------------------  
+*/
+.nav-tabs {
+  border-bottom: 3px solid var(--clr-link-default);
+}
+.nav-tabs li.nav-item {
+  margin-bottom: 0;
+  margin-right: 3px;
+}
+.nav-tabs li.nav-item a {
+  border: none;
+  background: var(--clr-bg-shade);
+}
+.nav-tabs li.nav-item a:focus, .nav-tabs li.nav-item a:hover {
+  border-color: var(--clr-link-default);
+  background: var(--clr-action-pirmary);
+  color: white;
+}
+.nav-tabs li.nav-item a.active {
+  background: var(--clr-action-pirmary);
+  color: white;
+}
+.nav-tabs li.nav-item::before {
+  content: '';
+}
+
+.ntg-inpage-nav {
+    padding-left: 0;
+    margin: 1rem 0 3rem 0;
+    border-left: 3px solid var(--clr-border-subtle);
+    padding-left: 1rem !important;    
+}
+
+.ntg-inpage-nav .nav-item.heading {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0.25rem 0;
+}
+
+.ntg-inpage-nav .nav-item {
+    margin-bottom: 0.25rem;
+}
+
+.ntg-inpage-nav .nav-item:before {
+    content: none;
+}
+
+.ntg-inpage-nav .nav-link {
+    display: inline-block;
+    padding: 0;
+}
+
+.ntg-inpage-nav .nav-link:hover {
+    border-bottom: 1.3px solid transparent;
+}
