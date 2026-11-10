@@ -1,0 +1,98 @@
+/* ntgovernment/web-design-system-tokens/dist/tokens/0.0.2/newntg.tokens.css */
+@custom-media --mq-xs (min-width: 0px);
+@custom-media --mq-sm (min-width: 576px);
+@custom-media --mq-md (min-width: 768px);
+@custom-media --mq-lg (min-width: 992px);
+@custom-media --mq-xl (min-width: 1200px);
+:root {
+  --border-width-lg: 2;
+  --border-width-md: 1;
+  --border-width-sm: 0.5;
+  --border-width-xl: 4;
+  --border-width-xxl: 8;
+  /* min-width */
+  --breakpoint-lg: 992px;
+  /* min-width */
+  --breakpoint-md: 768px;
+  /* min-width */
+  --breakpoint-sm: 576px;
+  /* min-width */
+  --breakpoint-xl: 1200px;
+  /* min-width (here for completeness) */
+  --breakpoint-xs: 0px;
+  --colors-action-disabled: rgb(86.667% 87.059% 87.843%);
+  --colors-action-hover: rgb(67.059% 23.137% 7.0588%);
+  --colors-action-pirmary: rgb(83.922% 25.49% 3.9216%);
+  --colors-action-pressed: rgb(45.882% 16.078% 4.7059%);
+  --colors-action-secondary: rgb(100% 100% 100%);
+  --colors-bg-accent: rgb(18.039% 59.216% 61.176%);
+  --colors-bg-accent-alt: rgb(95.686% 33.333% 10.196%);
+  --colors-bg-dark: rgb(83.922% 25.49% 3.9216%);
+  --colors-bg-dark-alt: rgb(20.392% 21.569% 25.49%);
+  --colors-bg-default: rgb(100% 100% 100%);
+  --colors-bg-shade: rgb(94.51% 94.902% 94.902%);
+  --colors-bg-shade-alt: rgb(90.98% 91.373% 91.765%);
+  --colors-border-accent: rgb(95.686% 33.333% 10.196%);
+  --colors-border-inverse: rgb(100% 100% 100%);
+  --colors-border-strong-01: rgb(20.392% 21.569% 25.49%);
+  --colors-border-strong-02: rgb(0% 19.608% 31.765%);
+  --colors-border-strong-03: rgb(47.059% 47.843% 50.196%);
+  --colors-border-subtle: rgb(86.667% 87.059% 87.843%);
+  --colors-focus-focus: rgb(45.49% 72.941% 74.118%);
+  --colors-link-default: rgb(20.392% 21.569% 25.49%);
+  --colors-link-hover: rgb(83.922% 25.49% 3.9216%);
+  --colors-link-inverse: rgb(100% 100% 100%);
+  --colors-link-inverse-hover: rgb(66.667% 73.333% 77.255%);
+  --colors-link-inverse-visited: rgb(98.824% 80% 73.333%);
+  --colors-link-pressed: rgb(0% 12.941% 21.176%);
+  --colors-link-visited: rgb(33.333% 15.686% 33.333%);
+  /* Backdrop of modal */
+  --colors-misc-backdrop: rgb(20.392% 21.569% 25.49% / 0.7);
+  /* Backdrop of modal */
+  --colors-misc-black: rgb(0% 0% 0%);
+  /* Backdrop of modal */
+  --colors-misc-transparent: rgb(100% 100% 100% / 0.2);
+  --colors-status-danger: rgb(65.098% 5.8824% 21.569%);
+  --colors-status-danger-bg: rgb(96.863% 90.588% 92.157%);
+  --colors-status-info: rgb(6.2745% 48.627% 75.294%);
+  --colors-status-info-bg: rgb(89.412% 94.118% 97.255%);
+  --colors-status-success: rgb(6.2745% 47.059% 6.2745%);
+  --colors-status-success-bg: rgb(81.176% 89.412% 81.176%);
+  --colors-status-warning: rgb(83.922% 25.49% 3.9216%);
+  --colors-status-warning-bg: rgb(98.431% 92.549% 90.588%);
+  --colors-text-alt: rgb(83.922% 25.49% 3.9216%);
+  --colors-text-default: rgb(20.392% 21.569% 25.49%);
+  --colors-text-emphasis: rgb(83.922% 25.49% 3.9216%);
+  --colors-text-inverse: rgb(100% 100% 100%);
+  --colors-text-muted: rgb(73.333% 73.725% 75.294%);
+  --desc: Optional short description;
+  --design-grid-max-width-lg: 1024px;
+  --design-grid-max-width-md: var(--breakpoint-lg);
+  --design-grid-max-width-sm: var(--breakpoint-md);
+  --design-grid-max-width-xl: 1472px;
+  --design-grid-max-width-xs: var(--breakpoint-sm);
+  --font-family-default: Lato;
+  --font-family-fallback: Arial;
+  --radius-button: var(--radius-none);
+  --radius-full: 100;
+  --radius-lg: 12;
+  --radius-md: 8;
+  --radius-none: 0;
+  --radius-sm: 4;
+  --radius-xl: 16;
+  --space-2xl: 32;
+  --space-4xl: 64;
+  --space-5xl: 80;
+  --space-lg: 20;
+  --space-md: 16;
+  --space-sm: 12;
+  --space-xl: 24;
+  --space-xs: 8;
+  --space-xxs: 4;
+  --string: List example text;
+  --text: Link sample text;
+  --timing-fast: 150ms;
+  --timing-normal: 250ms;
+  --title: String value;
+  --title-text: Image title;
+}
