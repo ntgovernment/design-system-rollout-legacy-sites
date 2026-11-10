@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import { execSync } from 'node:child_process';
+import { readFile, writeFile } from 'node:fs/promises';
 
 // Design tokens are pulled from the (private) tokens repo at build time.
 // Layout there: dist/tokens/<version>/<theme>.tokens.css
@@ -11,8 +12,7 @@ const TOKENS_THEME = process.env.TOKENS_THEME || 'newntg';
 const CHANNEL = 'dev';
 const PACKAGE = 'ntg';
 
-// Local token file referenced by index.html -- used as-is by the dev server,
-// swapped for the remote tokens during `vite build`.
+// Original local token file referenced by index.html (never overwritten).
 const LOCAL_TOKENS = '/src/css/tokens.css';
 
 function githubToken() {
@@ -55,20 +55,25 @@ async function latestTokensVersion() {
   return versions.at(-1);
 }
 
-// Replaces src/css/tokens.css with the remote token file during build.
-function remoteTokens(version) {
-  let css;
+// Downloads the remote token file into its own file in src/css/
+// (e.g. src/css/newntg.tokens.css), leaving the original tokens.css untouched.
+async function syncTokens(version) {
+  const file = `${TOKENS_PATH}/${version}/${TOKENS_THEME}.tokens.css`;
+  const css = `/* ${TOKENS_REPO}/${file} */\n` + (await github(file, true));
+  const target = `src/css/${TOKENS_THEME}.tokens.css`;
+  await writeFile(new URL(`./${target}`, import.meta.url), css);
+  console.log(`tokens ${version} (${TOKENS_THEME}) -> ${target}`);
+  return css;
+}
+
+// index.html links src/css/tokens.css (the original tokens, used by the dev
+// server). In the build, publish the downloaded tokens under that name instead.
+// The link has a `media` attribute, so Vite copies it as a plain asset straight
+// from disk -- swap its contents when the bundle is written.
+function publishTokens(css) {
   return {
-    name: 'remote-design-tokens',
+    name: 'publish-remote-tokens',
     apply: 'build',
-    enforce: 'pre',
-    async buildStart() {
-      const file = `${TOKENS_PATH}/${version}/${TOKENS_THEME}.tokens.css`;
-      css = `/* ${TOKENS_REPO}/${file} */\n` + (await github(file, true));
-      this.info(`using tokens ${version} (${TOKENS_THEME})`);
-    },
-    // index.html links tokens.css with a `media` attribute, so Vite copies it
-    // as a plain asset (read straight from disk) -- swap its contents here.
     generateBundle(_, bundle) {
       const asset = Object.values(bundle).find(
         (f) => f.type === 'asset' && f.originalFileName?.replace(/\\/g, '/') === LOCAL_TOKENS.slice(1)
@@ -79,15 +84,26 @@ function remoteTokens(version) {
   };
 }
 
-export default defineConfig(async ({ command }) => {
+export default defineConfig(async ({ command, mode }) => {
   // TOKENS_VERSION=0.0.1 pins a specific version; otherwise use the latest.
   const version =
     command === 'build' ? process.env.TOKENS_VERSION || (await latestTokensVersion()) : null;
+
+  // `vite build --mode offline` (npm run build:local) compiles the existing
+  // src/css/<theme>.tokens.css as-is, without downloading over local edits.
+  let tokensCss = null;
+  if (version && mode === 'offline') {
+    const target = `src/css/${TOKENS_THEME}.tokens.css`;
+    tokensCss = await readFile(new URL(`./${target}`, import.meta.url), 'utf8');
+    console.log(`tokens ${version} (${TOKENS_THEME}) <- local ${target}`);
+  } else if (version) {
+    tokensCss = await syncTokens(version);
+  }
   const assetDir = `${CHANNEL}/${PACKAGE}/${version}`;
 
   return {
     base: './',
-    plugins: version ? [remoteTokens(version)] : [],
+    plugins: tokensCss ? [publishTokens(tokensCss)] : [],
     server: {
       port: 5180,
       open: false

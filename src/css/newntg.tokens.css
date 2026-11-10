@@ -1,0 +1,54 @@
+@custom-media --mq-xs (min-width: 0px);
+@custom-media --mq-sm (min-width: 576px);
+@custom-media --mq-md (min-width: 768px);
+@custom-media --mq-lg (min-width: 992px);
+@custom-media --mq-xl (min-width: 1200px);
+:root[theme="newntg"] {
+  /* min-width (here for completeness) */
+  --breakpoint-xs: 0px;
+  --clr-action-disabled: rgb(86.667% 87.059% 87.843%);
+  --clr-action-hover: rgb(67.059% 23.137% 7.0588%);
+  --clr-action-pirmary: rgb(83.922% 25.49% 3.9216%);
+  --clr-action-pressed: rgb(45.882% 16.078% 4.7059%);
+  --clr-action-secondary: rgb(100% 100% 100%);
+  --clr-bg-accent: rgb(18.039% 59.216% 61.176%);
+  --clr-bg-accent-alt: rgb(95.686% 33.333% 10.196%);
+  --clr-bg-dark: rgb(83.922% 25.49% 3.9216%);
+  --clr-bg-dark-alt: rgb(20.392% 21.569% 25.49%);
+  --clr-bg-default: rgb(100% 100% 100%);
+  --clr-bg-shade: rgb(94.51% 94.902% 94.902%);
+  --clr-bg-shade-alt: rgb(90.98% 91.373% 91.765%);
+  --clr-border-accent: rgb(95.686% 33.333% 10.196%);
+  --clr-border-inverse: rgb(100% 100% 100%);
+  --clr-border-strong-01: rgb(20.392% 21.569% 25.49%);
+  --clr-border-strong-02: rgb(0% 19.608% 31.765%);
+  --clr-border-strong-03: rgb(47.059% 47.843% 50.196%);
+  --clr-border-subtle: rgb(86.667% 87.059% 87.843%);
+  --clr-focus-focus: rgb(45.49% 72.941% 74.118%);
+  --clr-link-default: rgb(20.392% 21.569% 25.49%);
+  --clr-link-hover: rgb(83.922% 25.49% 3.9216%);
+  --clr-link-inverse: rgb(100% 100% 100%);
+  --clr-link-inverse-hover: rgb(66.667% 73.333% 77.255%);
+  --clr-link-inverse-visited: rgb(98.824% 80% 73.333%);
+  --clr-link-pressed: rgb(0% 12.941% 21.176%);
+  --clr-link-visited: rgb(33.333% 15.686% 33.333%);
+  /* Backdrop of modal */
+  --clr-misc-backdrop: rgb(20.392% 21.569% 25.49% / 0.7);
+  /* Backdrop of modal */
+  --clr-misc-black: rgb(0% 0% 0%);
+  /* Backdrop of modal */
+  --clr-misc-transparent: rgb(100% 100% 100% / 0.2);
+  --clr-status-danger: rgb(65.098% 5.8824% 21.569%);
+  --clr-status-danger-bg: rgb(96.863% 90.588% 92.157%);
+  --clr-status-info: rgb(6.2745% 48.627% 75.294%);
+  --clr-status-info-bg: rgb(89.412% 94.118% 97.255%);
+  --clr-status-success: rgb(6.2745% 47.059% 6.2745%);
+  --clr-status-success-bg: rgb(81.176% 89.412% 81.176%);
+  --clr-status-warning: rgb(83.922% 25.49% 3.9216%);
+  --clr-status-warning-bg: rgb(98.431% 92.549% 90.588%);
+  --clr-text-alt: rgb(83.922% 25.49% 3.9216%);
+  --clr-text-default: rgb(20.392% 21.569% 25.49%);
+  --clr-text-emphasis: rgb(83.922% 25.49% 3.9216%);
+  --clr-text-inverse: rgb(100% 100% 100%);
+  --clr-text-muted: rgb(73.333% 73.725% 75.294%);
+}
