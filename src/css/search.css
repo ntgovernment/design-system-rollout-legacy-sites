@@ -16,9 +16,7 @@ form.search .form-control {
   /*min-width: 250px;*/
 }
 form.search .input-group-append button {
-  background-image: -webkit-linear-gradient(var(--clr-bg-accent) 0%, var(--clr-bg-accent-alt) 100%);
-  background-image: -o-linear-gradient(var(--clr-bg-accent) 0%, var(--clr-bg-accent-alt) 100%);
-  background-image: linear-gradient(var(--clr-bg-accent) 0%, var(--clr-bg-accent-alt) 100%);
+  background: var(--clr-bg-accent-alt);
   padding-left: 20px;
   padding-right: 20px;
   border-radius: var(--radii-none);
