@@ -19,7 +19,6 @@
 .sq-form .sq-form-question-datetime label,
 .sq-form .sq-form-question-datetime select {
   display: inline-block;
-  *display: inline;
   zoom: 1;
 }
 
@@ -29,10 +28,6 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.sq-form-question {
-  *zoom: 1;
 }
 
 .clearfix:before,
@@ -90,10 +85,6 @@ Utilities
 }
 label {
   cursor: pointer;
-}
-
-div {
-  *zoom: 1;
 }
 
 [type="search"] {

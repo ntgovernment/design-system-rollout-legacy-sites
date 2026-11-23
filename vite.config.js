@@ -59,7 +59,9 @@ async function latestTokensVersion() {
 // (e.g. src/css/newntg.tokens.css), leaving the original tokens.css untouched.
 async function syncTokens(version) {
   const file = `${TOKENS_PATH}/${version}/${TOKENS_THEME}.tokens.css`;
-  const css = `/* ${TOKENS_REPO}/${file} */\n` + (await github(file, true));
+  // Scope the tokens to the theme: :root -> :root[theme="<theme>"]
+  const remote = (await github(file, true)).replace(/^:root\s*\{/gm, `:root[theme="${TOKENS_THEME}"] {`);
+  const css = `/* ${TOKENS_REPO}/${file} */\n` + remote;
   const target = `src/css/${TOKENS_THEME}.tokens.css`;
   await writeFile(new URL(`./${target}`, import.meta.url), css);
   console.log(`tokens ${version} (${TOKENS_THEME}) -> ${target}`);

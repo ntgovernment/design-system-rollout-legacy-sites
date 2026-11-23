@@ -4,7 +4,7 @@
 @custom-media --mq-md (min-width: 768px);
 @custom-media --mq-lg (min-width: 992px);
 @custom-media --mq-xl (min-width: 1200px);
-:root {
+:root[theme="newntg"] {
   --border-width-lg: 2;
   --border-width-md: 1;
   --border-width-sm: 0.5;
